@@ -9,7 +9,8 @@ module LifeGame
     begin
       b = Board.new(x, y, opt)
       win = WindowManager.new(x, y)
-      10.times do
+      loop do
+        break if b.finish?
         win.exec(b.display)
         b.step
         sleep(0.2)

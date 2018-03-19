@@ -14,6 +14,10 @@ module LifeGame
       @h = h 
       @cells = initialize_cells(default[:pattern])
     end
+
+    def finish?
+      self.cells.all?(&:dead?)
+    end
   
     def initialize_cells(default_pattern = [])
       default_pattern = Array.new(w*h) { false } if default_pattern.nil? || default_pattern.empty?
