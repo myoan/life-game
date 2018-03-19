@@ -20,11 +20,8 @@ class Cell
   end
 
   def show
-    if alive?
-      return "x"
-    elsif dead?
-      return " "
-    end
+    return "x" if alive?
+    " "
   end
 
 # 誕生: 死亡しているセルの周囲に生存しているセルが3つある場合、そのセルは生存する
