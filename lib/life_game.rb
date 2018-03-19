@@ -2,14 +2,20 @@ require 'pp'
 require 'pry'
 require './lib/life_game/board'
 require './lib/life_game/cell'
+require './lib/life_game/window_manager'
 
 module LifeGame
   def self.run(x, y, opt)
-    b = Board.new(x, y, opt)
-    10.times do
-      b.show
-      b.step
-      puts "---"
+    begin
+      b = Board.new(x, y, opt)
+      win = WindowManager.new(x, y)
+      10.times do
+        win.exec(b.display)
+        b.step
+        sleep(0.2)
+      end
+    ensure
+      win.close
     end
   end
 end

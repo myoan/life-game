@@ -29,9 +29,9 @@ class Cell
 
   def show
     if alive?
-      print "x"
+      return "x"
     elsif dead?
-      print " "
+      return " "
     end
   end
 
