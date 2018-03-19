@@ -29,11 +29,7 @@ class Cell
 # 過疎: 生存しているセルの周囲に生存してるセルが1つ以下である場合、そのセルは死亡する
 # 過密: 生存しているセルの周囲に生存しているセルが4つ以上である場合、そのセルは死亡する
   def next_state_is_alive?(surround_alive_num)
-    if alive?
-      return true if [2, 3].include?(surround_alive_num)
-    elsif dead?
-      return true if [3].include?(surround_alive_num)
-    end
-    false
+    return [2, 3].include?(surround_alive_num) if alive?
+    [3].include?(surround_alive_num)
   end
 end
