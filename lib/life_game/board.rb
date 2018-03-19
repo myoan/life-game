@@ -1,11 +1,3 @@
-require 'pp'
-require 'pry'
-
-# 誕生: 死亡しているセルの周囲に生存しているセルが3つある場合、そのセルは生存する
-# 生存: 生存しているセルの周囲に生存してるセルが2 or 3ある場合、そのセルは生存する
-# 過疎: 生存しているセルの周囲に生存してるセルが1つ以下である場合、そのセルは死亡する
-# 過密: 生存しているセルの周囲に生存しているセルが4つ以上である場合、そのセルは死亡する
-
 module LifeGame
   class Board
     attr_accessor :w, :h, :cells
@@ -48,18 +40,11 @@ module LifeGame
       result << get_cell(x-1, y+1)
       result << get_cell(x,   y+1)
       result << get_cell(x+1, y+1)
-      ret = result.flatten.compact
-      # puts "surround: (#{cell.x}, #{cell.y}): #{cell.state}"
-      # pp ret
-      ret
+      result.flatten.compact
     end
   
     def surround_alive(cell)
-      srd = surround(cell)
-      srd.count do |c|
-        c&.alive?
-      end
-      # surround(cell).count { |c| c&.alive? }
+      surround(cell).count { |c| c&.alive? }
     end
 
     def coordinate_to_index(x, y)
