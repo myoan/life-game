@@ -1,0 +1,16 @@
+require "./lib/life_game"
+
+file = ARGV[0]
+width = 0
+height = 0
+raw_data = ""
+
+File.open(file).each_line do |l|
+  l.gsub!("\n", "")
+  width = l.size
+  height += 1
+  raw_data += l
+end
+
+data = raw_data.split("").map { |c| next true if c == "x"; false }
+LifeGame.run(width, height, {pattern: data})

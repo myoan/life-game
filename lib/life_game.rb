@@ -1,5 +1,3 @@
-require 'pp'
-require 'pry'
 require './lib/life_game/board'
 require './lib/life_game/cell'
 require './lib/life_game/window_manager'
@@ -21,15 +19,3 @@ module LifeGame
   end
 end
 
-raw_data = "        " +
-           "        " +
-           "        " +
-           "    x   " +
-           "   x    " +
-           "   xxx  " +
-           "        " +
-           "        "
-
-data = raw_data.split("").map { |c| next true if c == "x"; false }
-
-LifeGame.run(8, 8, {pattern: data})
