@@ -96,16 +96,6 @@ Style/ConditionalAssignment:
   Exclude:
     - 'lib/life_game/board.rb'
 
-# Offense count: 4
-Style/Documentation:
-  Exclude:
-    - 'spec/**/*'
-    - 'test/**/*'
-    - 'lib/life_game.rb'
-    - 'lib/life_game/board.rb'
-    - 'lib/life_game/cell.rb'
-    - 'lib/life_game/window_manager.rb'
-
 # Offense count: 2
 # Cop supports --auto-correct.
 # Configuration parameters: AutoCorrect, EnforcedStyle.
