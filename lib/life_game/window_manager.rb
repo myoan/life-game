@@ -1,4 +1,4 @@
-require 'curses'
+require "curses"
 
 module LifeGame
   class WindowManager
@@ -15,10 +15,10 @@ module LifeGame
 
     def exec(data)
       win.clear
-      win.box(?|,?-,?*)
+      win.box("|", "-", "*")
       h.times.each do |i|
         win.setpos(i + 1, 1)
-        win.addstr(data[(h*i)...(h*i+w)])
+        win.addstr(data[(h * i)...(h * i + w)])
       end
       win.refresh
     end
@@ -29,8 +29,3 @@ module LifeGame
     end
   end
 end
-
-# win = LifeGame::WindowManager.new(8, 8)
-# win.exec(64.times.map { |i|(40+i).chr }.join)
-# sleep(50)
-# win.close

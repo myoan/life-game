@@ -1,7 +1,7 @@
-require_relative '../../spec_helper'
+require_relative "../../spec_helper"
 
 RSpec.describe Cell do
-  describe '#alive?' do
+  describe "#alive?" do
     subject { cell.alive? }
     context "when State is DEAD" do
       let(:cell) { Cell.new(0, 0, false) }

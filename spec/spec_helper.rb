@@ -1,4 +1,4 @@
-require_relative '../lib/life_game'
+require_relative "../lib/life_game"
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
