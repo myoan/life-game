@@ -8,7 +8,7 @@ module LifeGame
     end
 
     def finish?
-      self.cells.all?(&:dead?)
+      cells.all?(&:dead?)
     end
   
     def initialize_cells(default_pattern = [])
@@ -52,7 +52,7 @@ module LifeGame
     end
 
     def display
-      self.cells.map { |c| c.show }.join
+      cells.map { |c| c.show }.join
     end
   
     def step
