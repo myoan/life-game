@@ -29,8 +29,3 @@ module LifeGame
     end
   end
 end
-
-# win = LifeGame::WindowManager.new(8, 8)
-# win.exec(64.times.map { |i|(40+i).chr }.join)
-# sleep(50)
-# win.close
