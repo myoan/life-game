@@ -14,12 +14,6 @@ Bundler/OrderedGems:
   Exclude:
     - 'Gemfile'
 
-# Offense count: 1
-# Cop supports --auto-correct.
-Layout/CommentIndentation:
-  Exclude:
-    - 'lib/life_game/cell.rb'
-
 # Offense count: 2
 # Cop supports --auto-correct.
 Layout/SpaceAfterComma:
