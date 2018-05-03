@@ -58,11 +58,11 @@ module LifeGame
     def step
       new_cells = initialize_cells
       cells.each_with_index do |cell, i|
-        if cell.next_state_is_alive?(surround_alive(cell))
-          new_cells[i].state = Cell::State::ALIVE
-        else 
-          new_cells[i].state = Cell::State::DEAD
-        end
+        new_cells[i].state = if cell.next_state_is_alive?(surround_alive(cell))
+                               Cell::State::ALIVE
+                             else
+                               Cell::State::DEAD
+                             end
       end
       self.cells = new_cells
     end
