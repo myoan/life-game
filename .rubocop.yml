@@ -1339,7 +1339,7 @@ Style/ArrayJoin:
 Style/AsciiComments:
   Description: 'Use only ascii symbols in comments.'
   StyleGuide: '#english-comments'
-  Enabled: true
+  Enabled: false
 
 Style/Attr:
   Description: 'Checks for uses of Module#attr.'
