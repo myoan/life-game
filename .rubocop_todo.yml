@@ -67,15 +67,6 @@ Metrics/AbcSize:
 Metrics/MethodLength:
   Max: 12
 
-# Offense count: 10
-# Configuration parameters: MinNameLength, AllowNamesEndingInNumbers, AllowedNames, ForbiddenNames.
-# AllowedNames: io, id, to, by, on, in, at
-Naming/UncommunicativeMethodParamName:
-  Exclude:
-    - 'lib/life_game.rb'
-    - 'lib/life_game/board.rb'
-    - 'lib/life_game/cell.rb'
-
 # Offense count: 4
 # Configuration parameters: AllowedChars.
 Style/AsciiComments:

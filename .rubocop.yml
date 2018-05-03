@@ -895,7 +895,7 @@ Naming/UncommunicativeMethodParamName:
   Description: >-
                 Checks for method parameter names that contain capital letters,
                 end in numbers, or do not meet a minimal length.
-  Enabled: true
+  Enabled: false
 
 Naming/VariableName:
   Description: 'Use the configured style when naming variables.'
