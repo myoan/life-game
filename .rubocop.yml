@@ -1,3 +1,5 @@
+inherit_from: .rubocop_todo.yml
+
 # These are all the cops that are enabled in the default configuration.
 
 #################### Bundler ###############################
