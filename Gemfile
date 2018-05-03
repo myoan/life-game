@@ -8,6 +8,7 @@ group :development, :test do
   gem 'pronto'
   gem 'pronto-flay',    require: false
   gem 'pronto-rubocop', require: false
+  gem 'rspec'
   gem 'pry'
   gem 'pry-byebug'
 end
