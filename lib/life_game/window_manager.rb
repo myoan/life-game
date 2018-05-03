@@ -18,7 +18,7 @@ module LifeGame
       win.box("|", "-", "*")
       h.times.each do |i|
         win.setpos(i + 1, 1)
-        win.addstr(data[(h*i)...(h*i+w)])
+        win.addstr(data[(h * i)...(h * i + w)])
       end
       win.refresh
     end

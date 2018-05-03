@@ -12,7 +12,7 @@ module LifeGame
     end
   
     def initialize_cells(default_pattern = [])
-      default_pattern = Array.new(w*h) { false } if default_pattern.nil? || default_pattern.empty?
+      default_pattern = Array.new(w * h) { false } if default_pattern.nil? || default_pattern.empty?
       Array.new(w * h) do |i|
         x = i % w
         y = i / w
@@ -32,14 +32,14 @@ module LifeGame
       result = []
       x = cell.x
       y = cell.y
-      result << get_cell(x-1, y-1)
-      result << get_cell(x,   y-1)
-      result << get_cell(x+1, y-1)
-      result << get_cell(x-1, y)
-      result << get_cell(x+1, y)
-      result << get_cell(x-1, y+1)
-      result << get_cell(x,   y+1)
-      result << get_cell(x+1, y+1)
+      result << get_cell(x - 1, y - 1)
+      result << get_cell(x,     y - 1)
+      result << get_cell(x + 1, y - 1)
+      result << get_cell(x - 1, y)
+      result << get_cell(x + 1, y)
+      result << get_cell(x - 1, y + 1)
+      result << get_cell(x,     y + 1)
+      result << get_cell(x + 1, y + 1)
       result.flatten.compact
     end
   
