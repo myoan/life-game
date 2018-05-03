@@ -61,14 +61,3 @@ Layout/TrailingWhitespace:
 # Offense count: 3
 Metrics/AbcSize:
   Max: 33
-
-# Offense count: 2
-# Configuration parameters: CountComments.
-Metrics/MethodLength:
-  Max: 12
-
-# Offense count: 1
-# Configuration parameters: AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, IgnoredPatterns.
-# URISchemes: http, https
-Metrics/LineLength:
-  Max: 98
