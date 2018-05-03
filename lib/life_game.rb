@@ -16,4 +16,3 @@ module LifeGame
     win.close
   end
 end
-
