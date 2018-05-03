@@ -67,12 +67,6 @@ Metrics/AbcSize:
 Metrics/MethodLength:
   Max: 12
 
-# Offense count: 3
-# Cop supports --auto-correct.
-Style/CharacterLiteral:
-  Exclude:
-    - 'lib/life_game/window_manager.rb'
-
 # Offense count: 1
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SingleLineConditionsOnly, IncludeTernaryExpressions.
