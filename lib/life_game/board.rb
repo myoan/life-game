@@ -21,11 +21,14 @@ module LifeGame
     end
 
     def get_cell(x, y)
-      return nil if x < 0
-      return nil if y < 0
-      return nil if x > w
-      return nil if y > h
+      return nil if out_of_board(x, y)
       cells[coordinate_to_index(x, y)]
+    end
+
+    def out_of_board(x, y)
+      return true if x < 0 || y < 0
+      return true if w < x || h < y
+      return false
     end
 
     def surround(cell)
