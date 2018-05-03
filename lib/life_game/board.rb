@@ -52,7 +52,7 @@ module LifeGame
     end
 
     def display
-      cells.map { |c| c.show }.join
+      cells.map(&:show).join
     end
   
     def step
