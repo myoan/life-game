@@ -1,0 +1,5 @@
+PRONTO_COMMIT_RESULT=`bundle exec pronto run --unstaged`
+if [ `echo $PRONTO_COMMIT_RESULT | wc -w` -gt 0 ]; then
+  echo $PRONTO_COMMIT_RESULT
+  exit 1
+fi
