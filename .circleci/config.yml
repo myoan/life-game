@@ -26,4 +26,4 @@ jobs:
 
       - run:
           name: run pronto
-          command: pronto run -f github_pr_review -c origin/master
+          command: bundle exec pronto run -f github_pr_review -c origin/master
