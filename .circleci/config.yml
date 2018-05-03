@@ -1,22 +1,19 @@
-# Ruby CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-ruby/ for more details
-#
 version: 2
 jobs:
   build:
     docker:
-       - image: circleci/ruby:2.4.1-node-browsers
-    working_directory: ~/repo
+      - image: zedtux/docker-rubocop
+    working_directory: ~/app
     steps:
       - checkout
 
-      # Download and cache dependencies
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "Gemfile.lock" }}
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
+
+      - run: apt-get update && apt-get install -y cmake
 
       - run:
           name: install dependencies
