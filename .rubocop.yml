@@ -1763,7 +1763,7 @@ Style/NumericPredicate:
   # object. Switching these methods has to be done with knowledge of the types
   # of the variables which rubocop doesn't have.
   AutoCorrect: false
-  Enabled: true
+  Enabled: false
 
 Style/OneLineConditional:
   Description: >-

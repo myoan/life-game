@@ -67,15 +67,6 @@ Metrics/AbcSize:
 Metrics/MethodLength:
   Max: 12
 
-# Offense count: 2
-# Cop supports --auto-correct.
-# Configuration parameters: AutoCorrect, EnforcedStyle.
-# SupportedStyles: predicate, comparison
-Style/NumericPredicate:
-  Exclude:
-    - 'spec/**/*'
-    - 'lib/life_game/board.rb'
-
 # Offense count: 1
 # Cop supports --auto-correct.
 Style/RedundantBegin:
