@@ -2,29 +2,29 @@ require "curses"
 
 module LifeGame
   class WindowManager
-    attr_accessor :win, :w, :h
+    attr_accessor :window, :width, :height
     def initialize(width, height)
       Curses.init_screen
       Curses.curs_set(0)
       top  = (Curses.lines - height) / 2
       left = (Curses.cols - width) / 2
-      @w   = width
-      @h   = height
-      @win = Curses::Window.new(height + 2, width + 2, top, left)
+      @width  = width
+      @height = height
+      @window = Curses::Window.new(height + 2, width + 2, top, left)
     end
 
     def exec(data)
-      win.clear
-      win.box("|", "-", "*")
-      h.times.each do |i|
-        win.setpos(i + 1, 1)
-        win.addstr(data[(h * i)...(h * i + w)])
+      window.clear
+      window.box("|", "-", "*")
+      height.times.each do |i|
+        window.setpos(i + 1, 1)
+        window.addstr(data[(height * i)...(height * i + width)])
       end
-      win.refresh
+      window.refresh
     end
 
     def close
-      win.close
+      window.close
       Curses.close_screen
     end
   end
