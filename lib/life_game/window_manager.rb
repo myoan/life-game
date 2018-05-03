@@ -15,7 +15,7 @@ module LifeGame
 
     def exec(data)
       win.clear
-      win.box("|","-","*")
+      win.box("|", "-", "*")
       h.times.each do |i|
         win.setpos(i + 1, 1)
         win.addstr(data[(h*i)...(h*i+w)])
