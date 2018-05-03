@@ -1927,6 +1927,7 @@ Style/StderrPuts:
 
 Style/StringLiterals:
   Description: 'Checks if uses of quotes match the configured preference.'
+  EnforcedStyle: double_quotes
   StyleGuide: '#consistent-string-literals'
   Enabled: true
 

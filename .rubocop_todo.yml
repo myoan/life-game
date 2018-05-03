@@ -67,15 +67,6 @@ Metrics/AbcSize:
 Metrics/MethodLength:
   Max: 12
 
-# Offense count: 4
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, ConsistentQuotesInMultiline.
-# SupportedStyles: single_quotes, double_quotes
-Style/StringLiterals:
-  Exclude:
-    - 'lib/life_game/cell.rb'
-    - 'spec/lib/life_game/cell_spec.rb'
-
 # Offense count: 1
 # Cop supports --auto-correct.
 # Configuration parameters: IgnoredMethods.

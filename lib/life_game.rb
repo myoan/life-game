@@ -1,6 +1,6 @@
-require_relative './life_game/board'
-require_relative './life_game/cell'
-require_relative './life_game/window_manager'
+require_relative "./life_game/board"
+require_relative "./life_game/cell"
+require_relative "./life_game/window_manager"
 
 module LifeGame
   def self.run(x, y, opt)
