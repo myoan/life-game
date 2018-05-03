@@ -28,7 +28,7 @@ module LifeGame
     def out_of_board(x, y)
       return true if x < 0 || y < 0
       return true if w < x || h < y
-      return false
+      false
     end
 
     def surround(cell)
